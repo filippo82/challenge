@@ -78,8 +78,8 @@ class NYTimesSource(object):
 
         Returns
         -------
-        One list for each batch. Each of those is a list of
-                 dictionaries with the defined rows.
+        A list for each batch of articles.
+        Each article is described by a flatteed dictionary.
         """
         if page:
             page_range = [page]
