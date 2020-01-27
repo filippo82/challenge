@@ -2,9 +2,9 @@
 
 ## Create environment
 ```shell
-git clone git@github.com:filippo82/squirro_challenge.git
-python -m venv squirro-env
-source squirro-env/bin/activate
+git clone git@github.com:filippo82/challenge.git
+python -m venv challenge-env
+source challenge-env/bin/activate
 pip install -r requirements.txt
 export NYT_API_KEY=YOUR_API_KEY
 ```
