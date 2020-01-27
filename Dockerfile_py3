@@ -1,0 +1,8 @@
+FROM python:3.7
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY nytimes_filippo_py3.py .
+COPY dashboard.py .
+EXPOSE 8050
+CMD ["echo", "Run this image in interactive mode!"]

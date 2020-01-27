@@ -1,0 +1,8 @@
+requests
+dash
+plotly
+matplotlib
+pandas
+scikit-learn
+pylint
+dash_bootstrap_components
