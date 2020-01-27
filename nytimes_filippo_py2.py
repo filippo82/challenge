@@ -100,10 +100,10 @@ class NYTimesSource(object):
 
             # Check status code - from developer.nytimes.com
             if responses.status_code == 401:
-                raise Warning('Error 401: Unauthorized request. Make sure api-key is set.')
+                raise Warning('Code 401: Unauthorized request. Make sure api-key is set.')
             elif responses.status_code == 429:
                 if wait_code429:
-                    print('Error 429: Too many requests. You reached your per minute or per day rate limit.')
+                    print('Code 429: Too many requests. You reached your per minute or per day rate limit.')
                     t_sleep = 60 - (time.time() - t_start) + 1
                     print("Let's wait {0:.0f}s before repeating the request".format(t_sleep))
                     time.sleep(t_sleep)
@@ -111,7 +111,7 @@ class NYTimesSource(object):
                     # Reset
                     t_start = time.time()
                 else:
-                    raise Warning('Error 429: Too many requests. You reached your per minute or per day rate limit.')
+                    raise Warning('Code 429: Too many requests. You reached your per minute or per day rate limit.')
 
             # Convert the responses to JSON and extract the articles
             responses = responses.json()['response']['docs']
